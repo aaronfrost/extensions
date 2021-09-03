@@ -1,0 +1,17 @@
+{
+    "name": "Free NYT",
+    "description": "No more paywall on New York Times' website. This extension unlock it!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": ["https://*.nytimes.com/*"],
+            "css": [
+                "content/css/polipop.core.min.css",
+                "content/css/polipop.default.min.css",
+                "content/css/content.css"
+            ],
+            "js": ["content/js/polipop.min.js", "content/js/content.js"]
+        }
+    ]
+}
