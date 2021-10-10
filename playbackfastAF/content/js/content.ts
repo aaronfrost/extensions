@@ -6,7 +6,6 @@ const PLAYER_SELECTOR = selector;
 const MAIN_KEY_CODE = 'KeyA';
 
 let fasting = false;
-
 window.addEventListener('keydown', PFA_DefaultListener);
 window.addEventListener('keyup', PFA_DefaultListener);
 

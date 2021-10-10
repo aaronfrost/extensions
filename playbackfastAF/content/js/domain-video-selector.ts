@@ -1,6 +1,7 @@
 const DOMAIN_SELECTORS = {
-    '//.{1,4}netflix.com.*': '[data-uia="video-canvas"] video',
+    '//.{0,4}netflix.com.*': '[data-uia="video-canvas"] video',
     '//tv.youtube.com.*': 'video.html5-main-video',
+    '//.{0,4}youtube.com.*': '.html5-video-container video',
 };
 const href: string = window.location.href;
 let selector;
