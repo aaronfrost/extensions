@@ -1,6 +1,11 @@
-# extensions
+# Frost's Extensions
 
-My Extensions
+Building extensions is a hobby. Sometimes I really enjoy building
+and extension to change the way that I
+experience the internet. The following are
+a list of extensions I build since Summer 2021.
+From now on I will post code to my extensions
+here.
 
 ## Free NYT
 
