@@ -1,0 +1,8 @@
+#app > div > #gateway-content {
+  display: none !important; }
+#app > div > div {
+  overflow: auto !important; }
+  #app > div > div > *:last-child {
+    display: none !important; }
+
+/*# sourceMappingURL=content.css.map */

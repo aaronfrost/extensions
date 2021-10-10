@@ -1,0 +1,18 @@
+#app {
+    // container1
+    & > div {
+        // Shitty ad container
+        & > #gateway-content {
+            display: none !important;
+        }
+
+        // container2
+        & > div {
+            overflow: auto !important;
+
+            & > *:last-child {
+                display: none !important;
+            }
+        }
+    }
+}
