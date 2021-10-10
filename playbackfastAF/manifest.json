@@ -1,13 +1,17 @@
 {
     "name": "Playback Fast AF",
-    "description": "Hit spacebar to playback 5x on Youtube TV. Makes skipping commercials and inbetween plays on Football easier.",
+    "description": "Hit spacebar to playback 10x on Youtube TV. Makes skipping commercials and inbetween plays on Football easier.",
     "version": "1.0",
     "manifest_version": 3,
     "content_scripts": [
         {
-            "matches": ["https://tv.youtube.com/*"],
+            "matches": [
+                "https://tv.youtube.com/*",
+                "https://netflix.com/*",
+                "https://www.netflix.com/*"
+            ],
             "css": [],
-            "js": ["content/js/content.js"]
+            "js": ["build/app.js"]
         }
     ]
 }

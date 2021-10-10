@@ -1,3 +1,5 @@
+import './ga';
+
 const appSelector = '#app';
 const container1Selector = `${appSelector} > *`;
 const container2Selector = `${container1Selector} > *`;

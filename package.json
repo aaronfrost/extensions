@@ -7,12 +7,17 @@
         "fnyt-cpjs": "cp node_modules/polipop/dist/polipop.min.js freenyt/content/js/polipop.min.js",
         "fnyt-cpcss": "cp node_modules/polipop/dist/css/polipop.core.min.css freenyt/content/css/polipop.core.min.css && cp node_modules/polipop/dist/css/polipop.default.min.css freenyt/content/css/polipop.default.min.css",
         "test": "echo \"Error: no test specified\" && exit 1",
+        "dev-fast": "webpack -c ./playbackfastAF/webpack.config.js -w",
         "postinstall": "npm run fnyt-cpjs && npm run fnyt-cpcss"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "prettier": "^2.3.2"
+        "prettier": "^2.3.2",
+        "ts-loader": "^9.2.6",
+        "typescript": "^4.4.3",
+        "webpack": "^5.58.1",
+        "webpack-cli": "^4.9.0"
     },
     "dependencies": {
         "polipop": "^1.0.0"

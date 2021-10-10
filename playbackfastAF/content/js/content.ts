@@ -1,13 +1,16 @@
+import selector from './domain-video-selector';
+
 const FAST_SPEED = 7;
 const NORMAL_SPEED = 1;
-const PLAYER_SELECTOR = 'video.html5-main-video';
+const PLAYER_SELECTOR = selector;
 const MAIN_KEY_CODE = 'KeyA';
 
 let fasting = false;
-window.addEventListener('keydown', PFA_Listener);
-window.addEventListener('keyup', PFA_Listener);
 
-function PFA_Listener(e) {
+window.addEventListener('keydown', PFA_DefaultListener);
+window.addEventListener('keyup', PFA_DefaultListener);
+
+function PFA_DefaultListener(e) {
     if (e.code != MAIN_KEY_CODE) {
         return;
     }
@@ -19,7 +22,7 @@ function PFA_Listener(e) {
     }
 }
 
-function PFA_keydown(e) {
+function PFA_keydown(e: KeyboardEvent) {
     // Don't store player. YTTV replaces the player sometimes, so we gotta select it JIT
     const player: HTMLVideoElement = document.querySelector(PLAYER_SELECTOR);
 
@@ -27,7 +30,7 @@ function PFA_keydown(e) {
     fasting = true;
     player.playbackRate = FAST_SPEED;
 }
-function PFA_keyup(e) {
+function PFA_keyup(e: KeyboardEvent) {
     const player: HTMLVideoElement = document.querySelector(PLAYER_SELECTOR);
 
     fasting = false;
