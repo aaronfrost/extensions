@@ -1,3 +1,4 @@
+import 'polipop';
 import './ga';
 
 const appSelector = '#app';

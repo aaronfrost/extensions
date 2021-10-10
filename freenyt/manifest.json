@@ -11,7 +11,7 @@
                 "content/css/polipop.default.min.css",
                 "content/css/content.css"
             ],
-            "js": ["content/js/polipop.min.js", "content/js/content.js"]
+            "js": ["build/app.js"]
         }
     ]
 }
