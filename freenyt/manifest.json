@@ -1,6 +1,6 @@
 {
-    "name": "Free NYT",
-    "description": "No more paywall on New York Times' website. This extension unlock it!",
+    "name": "NYTimes Free AF",
+    "description": "No more paywall on New York Times' website. This extension unlocks it!",
     "version": "1.0",
     "manifest_version": 3,
     "content_scripts": [

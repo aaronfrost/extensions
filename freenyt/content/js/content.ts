@@ -29,12 +29,12 @@ function main() {
         const pu = container.querySelector(puSelector);
 
         if (pu && pu != null && !notified) {
-            console.log('\n\n\n\n\nRMOVED AD!!!!\n\n\n\n\n');
+            console.log('\n\n\n\n\nREMOVED AD!!!!\n\n\n\n\n');
             notified = true;
             polipop.add({
                 content:
-                    'Free New York Times blocked the NYT paywall for you. Cheers!!!.',
-                title: 'Free New York Times',
+                    'NYTimes Free AF blocked the paywall for you. Cheers!!!.',
+                title: 'NYTimes Free AF',
                 type: 'info',
             });
         }

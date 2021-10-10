@@ -7,7 +7,7 @@ a list of extensions I build since Summer 2021.
 From now on I will post code to my extensions
 here.
 
-## Free NYT
+## NYTimes Free AF
 
 This is an extension to view New York Times articles without having to see the paywall.
 The paywall is crap, as I have to login every few days. Though
