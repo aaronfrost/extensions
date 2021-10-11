@@ -17,5 +17,5 @@ paywall, this.
 
 ## Playback Fast AF
 
-Change YoutubeTV playback speed to 10x by pressing "A" key. Release "A" key to resume normal play.
+Change YoutubeTV, Netflix, and Youtube playback speed to 10x by pressing "A" key. Release "A" key to resume normal play.
 Makes watching Football games easier.
