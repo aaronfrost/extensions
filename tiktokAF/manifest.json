@@ -1,0 +1,15 @@
+{
+    "name": "Tiktok AF",
+    "description": "Tiktok autoplay, as well as fast play (1.5 regular speed)",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.tiktok.com/*"
+            ],
+            "css": ["build/main.min.css"],
+            "js": ["build/app.js"]
+        }
+    ]
+}
