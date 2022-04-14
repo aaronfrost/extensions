@@ -1,13 +1,14 @@
 var path = require('path');
-var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env) => {
     return {
         entry: {
             main: [
                 path.join(__dirname, env.app, 'content/js/content.ts'),
-                path.join(__dirname, env.app, 'content/css/content.css')
-            ]
+                path.join(__dirname, env.app, 'content/css/content.scss'),
+            ],
         },
         module: {
             rules: [
@@ -27,7 +28,14 @@ module.exports = (env) => {
                     ],
                     exclude: /node_modules/,
                 },
-                {test: /\.(css|scss)/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']}
+                {
+                    test: /\.(css|scss)/,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        'css-loader',
+                        'sass-loader',
+                    ],
+                },
             ],
         },
         resolve: {
@@ -41,7 +49,9 @@ module.exports = (env) => {
             new MiniCssExtractPlugin({
                 filename: 'app.css',
             }),
-            // ...
-        ]
+            new CopyPlugin({
+                patterns: [path.join(__dirname, env.app, 'manifest.json')],
+            }),
+        ],
     };
 };
