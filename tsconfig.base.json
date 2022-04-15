@@ -1,8 +1,13 @@
 {
     "compilerOptions": {
+        "baseUrl": "./",
         "target": "ES5",
         "lib": ["DOM", "ES5", "es2015.promise"],
         "esModuleInterop": true,
-        "inlineSourceMap": true
+        "inlineSourceMap": true,
+        "paths": {
+            "@libs/*": ["libs/*"]
+        },
+        "moduleResolution": "node"
     }
 }

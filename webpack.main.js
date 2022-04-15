@@ -1,6 +1,7 @@
 var path = require('path');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var CopyPlugin = require('copy-webpack-plugin');
+var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = (env) => {
     return {
@@ -8,6 +9,9 @@ module.exports = (env) => {
             main: [
                 path.join(__dirname, env.app, 'content/js/content.ts'),
                 path.join(__dirname, env.app, 'content/css/content.scss'),
+            ],
+            background: [
+                path.join(__dirname, env.app, 'content/js/background.ts'),
             ],
         },
         module: {
@@ -42,7 +46,7 @@ module.exports = (env) => {
             extensions: ['.tsx', '.ts', '.js'],
         },
         output: {
-            filename: 'app.js',
+            filename: '[name].js',
             path: path.join(__dirname, env.app, 'build'),
         },
         plugins: [
@@ -52,6 +56,7 @@ module.exports = (env) => {
             new CopyPlugin({
                 patterns: [path.join(__dirname, env.app, 'manifest.json')],
             }),
+            // new LiveReloadPlugin({})
         ],
     };
 };
