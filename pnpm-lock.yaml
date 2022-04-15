@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   copy-webpack-plugin: ^10.2.4
-  css-loader: ^6.4.0
+  css-loader: ^6.7.0
   mini-css-extract-plugin: ^2.4.3
   polipop: ^1.0.0
   prettier: ^2.6.2
