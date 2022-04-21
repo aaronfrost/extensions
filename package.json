@@ -17,8 +17,10 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "copy-webpack-plugin": "^10.2.4",
+        "@types/chrome": "^0.0.181",
+        "copy-webpack-plugin": "^9.1.0",
         "css-loader": "^6.7.0",
+        "livereload-js": "^3.3.3",
         "mini-css-extract-plugin": "^2.4.3",
         "prettier": "^2.6.2",
         "sass": "^1.43.3",

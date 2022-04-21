@@ -10,9 +10,10 @@
         {
             "matches": ["https://www.tiktok.com/*"],
             "css": ["main.css"],
-            "js": ["main.js", "livereload.js", "livereloadplugin.js"]
+            "js": ["main.js"]
         }
-    ],
-    "host_permissions": ["http://localhost:35729/", "ws://localhost:35729/"],
-    "permissions": ["tabs", "storage", "management", "activeTab", "alarms", "background"]
+    ]
 }
+
+
+
