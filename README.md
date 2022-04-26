@@ -19,3 +19,7 @@ paywall, this.
 
 Change YoutubeTV, Netflix, and Youtube playback speed to 10x by pressing "A" key. Release "A" key to resume normal play.
 Makes watching Football games easier.
+
+## Tiktok AF
+
+An extension to auto-scroll tiktoks.
