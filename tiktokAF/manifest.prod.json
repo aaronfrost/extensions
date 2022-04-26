@@ -1,6 +1,6 @@
 {
     "name": "Tiktok AF",
-    "description": "Tiktok auto-scroll, as well as faster play (1.5 regular speed)",
+    "description": "Just open Tiktok and this extension will take care of the rest, auto-scrolling you for hours!",
     "version": "1.1",
     "manifest_version": 3,
     "background": {
@@ -12,8 +12,10 @@
             "css": ["main.css"],
             "js": ["main.js"]
         }
-    ]
+    ],
+    "icons": {
+        "16": "img/AF16.png",
+        "48": "img/AF48.png",
+        "128": "img/AF128.png"
+    }
 }
-
-
-

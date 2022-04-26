@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var CopyPlugin = require('copy-webpack-plugin');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (env, argv) => {
     var plugins = [
@@ -11,20 +12,25 @@ module.exports = (env, argv) => {
         }),
         new CopyPlugin({
             patterns: [
-                path.join(__dirname, env.app, `manifest${argv.mode === 'development' ? '' : '.prod'}.json`),
-                argv.mode === 'development'
-                    ? path.join(__dirname, 'node_modules', `livereload-js`, 'dist', 'livereload.js')
-                    : undefined,
+                {
+                    from: path.join(__dirname, env.app, `manifest${argv.mode === 'development' ? '' : '.prod'}.json`),
+                    to: path.join(__dirname, env.app, 'build', `manifest.json`),
+                },
+                {
+                    from: path.join(__dirname, env.app, 'content', `img`),
+                    to: path.join(__dirname, env.app, 'build', `img`),
+                },
             ],
         }),
         new webpack.DefinePlugin({
             'process.env.npm_package_version': null,
-            'TTAF.dev': argv.mode === 'development' ? true : false,
+            'AFEXT.dev': argv.mode === 'development',
         }),
+        new CleanWebpackPlugin(),
     ];
     var devPlugins = [
         new LiveReloadPlugin({
-            protocol: 'http',
+            protocol: 'https',
         }),
     ];
 
@@ -36,7 +42,7 @@ module.exports = (env, argv) => {
         background: [path.join(__dirname, env.app, 'content/js/background.ts')],
     };
     if (argv.mode === 'development') {
-        entry.livereloadplugin = [path.join(__dirname, env.app, 'content/js/liveReloadPlugin.ts')];
+        entry.livereloadplugin = [path.join(__dirname, 'libs/livereload/startup.ts')];
     }
 
     return {
