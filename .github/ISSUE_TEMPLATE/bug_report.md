@@ -9,4 +9,4 @@ assignees: aaronfrost
 **Please describe the bug**
 A clear and concise description of what the bug is.
 
-_You can also message me on [twitter](https://twitter.com/aaronfrost) for help._
+[comment]: # 'You can also message me on https://twitter.com/aaronfrost for help.'
