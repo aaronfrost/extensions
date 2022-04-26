@@ -25,6 +25,7 @@ function detectMode() {
     // If currentMode != previousMode, tell everyone
     if (previousMode !== mode) {
         console.log('Changes Mode: ', mode);
+        window.dispatchEvent(new Event(`TTMode${mode}`));
     }
 
     previousMode = mode;

@@ -11,8 +11,3 @@
 /**
  * How to build your own LiveReload Plugin: https://github.com/livereload/livereload-js/blob/master/src/less.js
  */
-import 'livereload-js';
-
-// @ts-ignore
-console.log(LiveReloadOptions);
-console.log(`chrome.runtime.getPackageDirectoryEntry`, chrome.runtime.getPackageDirectoryEntry);

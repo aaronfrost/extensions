@@ -1,4 +1,6 @@
 export class ExtensionPlugin {
+    public static identifier: string = 'ext';
+    public static version: string = '1.0';
     constructor(private window) {}
 
     reload(path, options) {
@@ -16,9 +18,5 @@ export class ExtensionPlugin {
     }
 }
 
-// @ts-ignore
-ExtensionPlugin.identifier = 'ext';
-// @ts-ignore
-ExtensionPlugin.version = '1.0';
 (window as any).LiveReload.addPlugin(ExtensionPlugin);
 (window as any).LiveReload.options.pluginOrder = 'ext';
