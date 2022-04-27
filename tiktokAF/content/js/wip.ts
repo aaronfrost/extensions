@@ -44,8 +44,9 @@ function mode0Listener() {
         const regularModeContainer = document.querySelectorAll('[data-e2e="recommend-list-item-container"]');
         const curVid = regularModeContainer[num];
         curVid.scrollIntoView({ behavior: 'smooth' });
+        document.querySelectorAll('.ttaf-cur').forEach((e) => e.classList.remove('ttaf-cur'));
         curVid.classList.add('ttaf-cur');
-        curVid.querySelector('[class*=DivActionItemContainer]').append(btn);
+        curVid.querySelector('[class*=DivActionItemContainer]').prepend(btn);
         btn.addEventListener('click', goToNext);
         let video;
         const int = setInterval(() => {
@@ -54,6 +55,7 @@ function mode0Listener() {
                 return;
             }
             clearInterval(int);
+            video.volume = 1;
             video.addEventListener('ended', onEnded);
         }, 10);
         function onEnded() {
@@ -62,6 +64,7 @@ function mode0Listener() {
             curVid.classList.remove('ttaf-cur');
             video.volume = 0;
             goToVideo(++currVideo);
+            // goToVideo(currVideo); // Comment in to develop without progressing to next video.
         }
 
         function goToNext() {
