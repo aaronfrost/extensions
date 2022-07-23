@@ -1,3 +1,5 @@
+![Hubspot Dark AF Logo](content/img/AF48.png)
+
 # Hubspot Dark AF
 
 ## A chrome extension that makes Hubspot dark AF
