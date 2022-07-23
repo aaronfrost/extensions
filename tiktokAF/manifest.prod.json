@@ -1,7 +1,7 @@
 {
     "name": "Tiktok AF",
     "description": "Just open Tiktok and this extension will take care of the rest, auto-scrolling you for hours!",
-    "version": "1.1",
+    "version": "1.2",
     "manifest_version": 3,
     "background": {
         "service_worker": "background.js"
