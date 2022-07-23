@@ -9,7 +9,6 @@ import { ExtensionPlugin } from './customReloadPlugin';
 };
 
 const liveReload = new LiveReload(window);
-
 for (const k in window) {
     if (k.match(/^LiveReloadPlugin/)) {
         liveReload.addPlugin(window[k]);

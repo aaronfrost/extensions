@@ -1,0 +1,76 @@
+// If you are the person who had the Hubspot dark extension and then started charging...
+// I want you to know that I only built this because that was so shitty of you to start
+// charging monthly for a dark mode. This extension, while not as pretty as yours, took
+// me 5 minutes to write the code.
+body {
+    background: black;
+    filter: invert(100%) brightness(1.75) !important;
+
+    img,
+    svg {
+        filter: invert(100%) brightness(1.3) !important;
+    }
+}
+.hubspot.ui-app .page {
+    background: white;
+
+    img {
+        filter: invert(100%) brightness(1.4) !important;
+    }
+}
+// From here down it is an extension of the color changing
+//:root {
+//    --bg: #444;
+//    --border: #111;
+//    --click-color: red;
+//}
+//body,
+//body .page,
+//.private-page,
+//.private-form__control,
+//.private-clickable {
+//    background-color: var(--bg) !important;
+//}
+//
+//.private-table {
+//    thead,
+//    tbody,
+//    tr,
+//    td {
+//        background-color: var(--bg) !important;
+//        border-color: var(--border) !important;
+//        color: var(--click-color) !important;
+//    }
+//}
+//i18n-string,
+//.private-truncated-string,
+//.private-link,
+//.private-clickable,
+//.private-icon,
+//.private-dropdown__caret {
+//    color: var(--click-color) !important;
+//}
+//
+//.private-button {
+//    color: var(--click-color) !important;
+//    background-color: var(--bg) !important;
+//
+//    &.private-paginator__button--active {
+//        filter: brightness(80%) !important;
+//        border-color: var(--click-color) !important;
+//    }
+//    &:hover {
+//        filter: brightness(60%) !important;
+//    }
+//}
+//
+//[class*='ColumnHeader__'],
+//[class*='ColumnFooter__'],
+//[class*='DroppableColumn__'],
+//[class*='UISection__'],
+//[class*='UniversalSidebarHighlightWrapper__'],
+//[class*='AccordionTransition__'],
+//[class*='Card__StyledUITile'] {
+//    background-color: var(--bg) !important;
+//    color: var(--click-color) !important;
+//}

@@ -1,0 +1,26 @@
+{
+    "name": "Hubspot Dark AF",
+    "description": "A **FREE** extension to have dark mode for Hubspot",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://app.hubspot.com/*"],
+            "css": ["main.css"],
+            "js": ["main.js", "livereloadplugin.js"]
+        }
+    ],
+    "host_permissions": ["https://localhost:35729/", "wss://localhost:35729/"],
+    "permissions": [],
+    "icons": {
+        "16": "img/AF16.png",
+        "48": "img/AF48.png",
+        "128": "img/AF128.png"
+    },
+    "externally_connectable": {
+        "matches": ["*://localhost/*"]
+    }
+}
