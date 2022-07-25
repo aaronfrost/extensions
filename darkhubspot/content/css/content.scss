@@ -18,6 +18,10 @@ body {
         filter: invert(100%) brightness(1.4) !important;
     }
 }
+
+.navbar-inner svg path {
+    fill: black !important;
+}
 // From here down it is an extension of the color changing
 //:root {
 //    --bg: #444;
